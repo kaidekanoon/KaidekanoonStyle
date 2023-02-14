@@ -73,3 +73,40 @@ sr.reveal('.work__img', {
 sr.reveal('.contact__input', {
     interval: 200
 });
+
+
+//  i wrote js
+// const contactForm = document.querySelector("contact-form");
+
+
+// let namee = document.getElementById('namee');
+// let email = document.getElementById('email');
+// let desc = document.getElementById('name');
+
+// contactForm.addEventListener('submit',(e)=>{
+//     // console.log(formData)
+
+//     // e.preventDefault();
+//     let formData = {
+//         name : namee.value,
+//         email: email.value,
+//         desc : desc.value
+//     }
+//     console.log(formData)
+//     let xhr = new XMLHttpRequest();
+//     xhr.open('POST','https://kaydakanoon.onrender.com')
+//     xhr.setRequestHeader("Accept", "application/json");
+// xhr.setRequestHeader("Content-Type", "application/json");
+//     xhr.onload =  function(){
+//         console.log(xhr.responseText);
+//         if(xhr.responseText == 'success'){
+//             alert("email sent");
+//             namee.value = "";
+//             email.value = "";
+//             desc.value = "";
+//         }else{
+//             alert("Something went wrong");
+//         }
+//     }
+//     xhr.send(JSON.stringify(formData))
+// })
