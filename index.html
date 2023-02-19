@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="http://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=vHMrKjglQpBCsEtZiSR-xSgm_NDlqFObePL3fF0CP-hAIOeQH9tpCwUF9Bp14xIr" charset="UTF-8"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
@@ -126,16 +126,16 @@
             <h2 class="section-title">Contact Us</h2>
 
             <div class="contact__container bd-grid">
-                <form  class="contact-form">
-                    <input type="text" placeholder="Enter Your Name" name="namee" id="name" class="contact__input">
+                <form method="post"  class="contact-form">
+                    <input type="text" placeholder="Enter Your Name" name="namee" id="namee" class="contact__input">
                     <input type="mail" placeholder="Enter Your Email" name="email" id="email" class="contact__input">
                     <textarea name="desc" placeholder="How can we help you ?" id="desc" cols="0" rows="10" class="contact__input"></textarea>
-                    <input  type="submit" value="Submit" name="submit" id="submit" class="contact__button button">
+                    <button class="contact__button button" type="submit"  >Submit</button>
+                    
                 </form>
             </div>
         </section>
     </main>
-
     <!--===== FOOTER =====-->
     <footer class="footer">
         <p class="footer__title"><i class='fas fa-balance-scale'></i> kaidekanoon.com</p>

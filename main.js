@@ -1,3 +1,4 @@
+
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -75,38 +76,57 @@ sr.reveal('.contact__input', {
 });
 
 
-//  i wrote js
-// const contactForm = document.querySelector("contact-form");
+const contactForm = document.querySelector(".contact-form");
+let namee = document.getElementById('namee');
+let email = document.getElementById('email');
+let desc = document.getElementById('desc');
+
+contactForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    let formData = {
+        Name : namee.value,
+        Email: email.value,
+        Description : desc.value
+    }
+    console.log(formData)
+    let url = "https://kaydakanoon.onrender.com"
+    // let url = "http://localhost:5000"
+    fetch(url, {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+})
+.then(response => response.json())
+.then((response) => {
+    alert("Message sent")
+    console.log(JSON.stringify(response))
+    namee.value = ""
+    email.value = ""
+    desc.value = ""
+}
+
+    )
+})
 
 
-// let namee = document.getElementById('namee');
-// let email = document.getElementById('email');
-// let desc = document.getElementById('name');
 
-// contactForm.addEventListener('submit',(e)=>{
-//     // console.log(formData)
-
-//     // e.preventDefault();
-//     let formData = {
-//         name : namee.value,
-//         email: email.value,
-//         desc : desc.value
-//     }
-//     console.log(formData)
-//     let xhr = new XMLHttpRequest();
-//     xhr.open('POST','https://kaydakanoon.onrender.com')
-//     xhr.setRequestHeader("Accept", "application/json");
+// console.log(formData)
+// let xhr = new XMLHttpRequest();
+// xhr.open('POST','')
+// xhr.setRequestHeader("Accept", "application/json");
 // xhr.setRequestHeader("Content-Type", "application/json");
-//     xhr.onload =  function(){
-//         console.log(xhr.responseText);
-//         if(xhr.responseText == 'success'){
-//             alert("email sent");
-//             namee.value = "";
-//             email.value = "";
-//             desc.value = "";
-//         }else{
-//             alert("Something went wrong");
-//         }
+// xhr.onload =  function(){
+//     console.log(xhr.responseText);
+//     if(xhr.responseText == 'success'){
+//         alert("email sent");
+//         namee.value = "";
+//         email.value = "";
+//         desc.value = "";
+//     }else{
+//         alert("Something went wrong");
 //     }
-//     xhr.send(JSON.stringify(formData))
-// })
+// }
+// xhr.send(JSON.stringify(formData))
